@@ -21,14 +21,14 @@ class Driver {
 
 class Route {
   constructor(beginningLocation, endingLocation) {
-    this.beginningLocation = beginningLocation
-    this.endingLocation = endingLocation
+    this.beginningLocation = beginningLocation;
+    this.endingLocation = endingLocation;
   }
   
   blocksTravelled() {
-    let verticalHorizontal = this.endingLocation.vertical - this.beginningLocation
-    let horizontalDistance = (eastWest.indexOf(this.endingLocation.horizontal) - eastWest.indexOf(this.beginningLocation.horizontal))
-    return verticalDistance + horizontalDistance
+    let verticalHorizontal = (this.endingLocation.vertical - this.beginningLocation);
+    let horizontalDistance = (eastWest.indexOf(this.endingLocation.horizontal) - eastWest.indexOf(this.beginningLocation.horizontal));
+    return verticalDistance + horizontalDistance;
   }
 }
 
