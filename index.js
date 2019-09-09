@@ -30,6 +30,14 @@ class Route {
     let horizontalDistance = (eastWest.indexOf(this.endingLocation.horizontal) - eastWest.indexOf(this.beginningLocation.horizontal));
     return verticalDistance + horizontalDistance;
   }
+  
+   estimatedTime(peak = false){
+      if(peak === true){
+        return this.blocksTravelled() / 2
+      }else{
+        return this.blocksTravelled() / 3
+      }
+  }
 }
 
 
