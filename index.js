@@ -31,6 +31,19 @@ class Route {
   //   return verticalDistance + horizontalDistance;
   // }
   
+   blocksTravelled(){
+    let verticalDistance = this.endingLocation.vertical - this.beginningLocation.vertical;
+    let horizontalDistance = eastWest.indexOf(this.endingLocation.horizontal) - eastWest.indexOf(this.beginningLocation.horizontal);
+
+    if(this.beginningLocation.horizontal === this.endingLocation.horizontal){
+        return verticalDistance;
+    }else if (this.beginningLocation.vertical === this.endingLocation.vertical){
+        return horizontalDistance;
+    }else{
+        return verticalDistance + horizontalDistance;
+    }
+  }
+  
    estimatedTime(peak = false){
       if(peak === true){
         return this.blocksTravelled() / 2
